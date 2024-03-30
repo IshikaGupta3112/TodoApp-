@@ -94,7 +94,6 @@ function Todo() {
                           {e.title}
                         </p>
                         <div className="flex gap-2 justify-center items-center">
-                          {!snapshot.isDragging && (
                             <img
                               src={deleteimg}
                               className="cursor-pointer pl-4"
@@ -104,7 +103,6 @@ function Todo() {
                                 }
                               }}
                             ></img>
-                          )}
                           <input
                             type="checkbox"
                             checked={e.completed}
