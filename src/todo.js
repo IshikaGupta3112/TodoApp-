@@ -69,7 +69,6 @@ function Todo() {
               {...provided.droppableProps}
               className="w-full"
             >
-              {provided.placeholder}
               {todoList &&
                 todoList.map((e, ind) => (
                   <Draggable draggableId={String(e.id)} index={ind} key={e.id}>
