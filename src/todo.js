@@ -41,7 +41,6 @@ function Todo() {
     if (!result.destination) {
       return;
     }
-
     const sourceIndex = result.source.index;
     const destinationIndex = result.destination.index;
     dispatch(reorderData(sourceIndex, destinationIndex));
@@ -54,7 +53,8 @@ function Todo() {
         <textarea
           required
           placeholder="Add a todo task"
-          className="resize-none w-full p-6 rounded-xl mb-4 border-2 border-black"
+          maxLength={200}
+          className="resize-none w-full p-6 rounded-xl mb-4 border-2 border-black outline-none"
           rows={2}
           value={title}
           onChange={(e) => setTitle(e.target.value)}

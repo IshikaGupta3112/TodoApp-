@@ -18,31 +18,36 @@ export const todoData = () => async (dispatch) => {
 };
 
 export const addData = (data) => {
-  return {
-    type: "ADD_TODO",
-    payload: data,
-  };
+  return (dispatch)=> {
+    dispatch({type: "ADD_TODO",
+    payload: data
+  });
 };
+}
 
 export const deleteData = (id) => {
-  return {
-    type: "DELETE_TODO",
-    payload: id,
-  };
+  return (dispatch)=> {
+    dispatch({type: "DELETE_TODO",
+    payload: id});
+};
 };
 export const completeData = (id) => {
-  return {
-    type: "COMPLETE_TODO",
-    payload: id,
-  };
+  return (dispatch)=> {
+    dispatch({
+      type: "COMPLETE_TODO",
+      payload: id,
+    });
+};
 };
 
 export const reorderData = (sourceIndex, destinationIndex) => {
-  return {
-    type: "REORDER_TODOS",
-    payload: {
-      sourceIndex,
-      destinationIndex,
-    },
-  };
+  return (dispatch)=> {
+    dispatch({
+      type: "REORDER_TODOS",
+      payload: {
+        sourceIndex,
+        destinationIndex
+      },
+    });
+};
 };
